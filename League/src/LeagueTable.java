@@ -12,26 +12,26 @@ public class LeagueTable {
 
 	PrintStream out;
 
-	String teams = "AFC Bournemouth," + 
-			"Arsenal," + 
-			"Aston Villa," + 
-			"Brighton & Hove Albion," + 
-			"Burnley," + 
-			"Chelsea," + 
-			"Crystal Palace," + 
-			"Everton," + 
-			"Leicester City," + 
-			"Liverpool," + 
-			"Manchester City," + 
-			"Manchester United," + 
-			"Newcastle United," + 
-			"Norwich City," + 
-			"Sheffield United," + 
-			"Southampton," + 
-			"Tottenham Hotspur," + 
-			"Watford," + 
-			"West Ham United," + 
-			"Wolverhampton Wanderers";
+//	String teams = "AFC Bournemouth," + 
+//			"Arsenal," + 
+//			"Aston Villa," + 
+//			"Brighton & Hove Albion," + 
+//			"Burnley," + 
+//			"Chelsea," + 
+//			"Crystal Palace," + 
+//			"Everton," + 
+//			"Leicester City," + 
+//			"Liverpool," + 
+//			"Manchester City," + 
+//			"Manchester United," + 
+//			"Newcastle United," + 
+//			"Norwich City," + 
+//			"Sheffield United," + 
+//			"Southampton," + 
+//			"Tottenham Hotspur," + 
+//			"Watford," + 
+//			"West Ham United," + 
+//			"Wolverhampton Wanderers";
 
 	List <String> teamz;
 	List <Team> clubs;
@@ -54,7 +54,7 @@ public class LeagueTable {
 	}
 
 	public void setTeamz() {
-		this.teamz = new ArrayList <>(Arrays.asList(teams.split(",")));
+		this.teamz = new ArrayList <>(Arrays.asList(LeagueConstants.TEAMS.split(",")));
 	}
 
 	public static void main(String [] args) {
@@ -80,6 +80,8 @@ public class LeagueTable {
 	}
 
 	public List<Fixture> createGameweekOne() {
+		
+		//TODO REFACTOR TO USE NEW STUFF
 
 		List<Team> home = new LinkedList<Team>();
 		List<Team> away = new LinkedList<Team>();
